@@ -9,6 +9,6 @@
         Title="MainWindow" Height="335.854" Width="624.39">
     <Grid>
         <PersianCalendarWPF:PersianCalendar FontFamily="IranSans" Margin="10,10,420.6,127.4"></PersianCalendarWPF:PersianCalendar>
-        <PersianCalendarWPF:PersianDatePicker FontFamily="IranSans" Margin="225,11,277.6,270.4"></PersianCalendarWPF:PersianDatePicker>
+        <PersianCalendarWPF:PersianDatePicker Name="pcw" FontFamily="IranSans" Margin="225,11,277.6,270.4" SelectedDateChanged="PersianDatePicker_SelectedDateChanged"></PersianCalendarWPF:PersianDatePicker>
     </Grid>
 </Window>

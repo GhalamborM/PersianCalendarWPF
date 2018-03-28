@@ -33,5 +33,10 @@ namespace PersianCalendarSample
         {
             InitializeComponent();
         }
+
+        private void PersianDatePicker_SelectedDateChanged(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine(pcw.SelectedDate.ToString());
+        }
     }
 }

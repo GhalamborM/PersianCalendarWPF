@@ -464,7 +464,7 @@ namespace PersianCalendarWPF
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("{0}/{1}/{2}", Year, Month, Day);
+            return string.Format("{0}/{1}/{2}", Year.ToString("0000"), Month.ToString("00"), Day.ToString("00"));
         }
 
         /// <summary>
