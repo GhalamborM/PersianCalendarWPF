@@ -8,7 +8,9 @@
 *	Written by Mahdi Hosseini <Mahdidvb72@gmail.com>,  2018, 3, 28, 02:12 ب.ظ
 *	
 ***********************************************************************************/
+using Newtonsoft.Json.Linq;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -19,6 +21,7 @@ namespace PersianCalendarWPF
     [System.ComponentModel.DefaultProperty("DisplayDate")]
     public partial class PersianCalendar : UserControl
     {
+
         //Properties
 
         public static readonly DependencyProperty DisplayDateProperty;
@@ -497,7 +500,22 @@ namespace PersianCalendarWPF
                     }
                     if (dateInRange && date.Month == firstDayInMonth.Month)
                     {//we're good!
-                        button.Foreground = Brushes.Black;
+                        JObject oo = JObject.Parse(Properties.Resources.events);
+
+                        var hijriNow = IslamicDateUtils.PersianDayToIslamicDay(date.Year, date.Month, date.Day);
+
+                        var getPersianEvents = oo["Persian Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == date.Day.ToString() && x.SelectToken("month").ToString() == date.Month.ToString() && x.SelectToken("type").ToString() == "Iran").Select(m => (string)m.SelectToken("holiday")).ToArray();
+                        var getHijriEvents = oo["Hijri Calendar"].Where(x => x != null && x.SelectToken("day").ToString() == hijriNow.Day.ToString() && x.SelectToken("month").ToString() == hijriNow.Month.ToString() && x.SelectToken("type").ToString() == "Islamic Iran").Select(m => (string)m.SelectToken("holiday")).ToArray();
+
+                        if (string.Join(", ", getPersianEvents).Contains("True") || string.Join(", ", getHijriEvents).Contains("True"))
+                        {
+                            button.Foreground = Brushes.Red;
+                        }
+                        else
+                        {
+                            button.Foreground = Brushes.Black;
+
+                        }
                         button.Content = date.Day.ToString();
                         button.IsEnabled = true;
                         button.Tag = date;
@@ -523,7 +541,7 @@ namespace PersianCalendarWPF
             this.todayCheck();
             this.selectedDateCheck(null);
         }
-
+       
         private void setYearMode()
         {
             this.monthUniformGrid.Visibility = this.decadeUniformGrid.Visibility = Visibility.Collapsed;

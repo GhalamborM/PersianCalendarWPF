@@ -11,6 +11,7 @@
     <AssemblyName>PersianCalendarWPF</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AssemblyVersion>1.0.17.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -44,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalendarMode.cs" />
+    <Compile Include="HijriDate\DateTimeOffsetPart.cs" />
+    <Compile Include="HijriDate\DateTimeUtils.cs" />
+    <Compile Include="HijriDate\IslamicDateUtils.cs" />
+    <Compile Include="HijriDate\IslamicDay.cs" />
+    <Compile Include="HijriDate\PersianDay.cs" />
+    <Compile Include="HijriDate\PersianMonth.cs" />
+    <Compile Include="HijriDate\PersianYear.cs" />
     <Compile Include="PersianCalendar.xaml.cs">
       <DependentUpon>PersianCalendar.xaml</DependentUpon>
     </Compile>
@@ -54,6 +65,11 @@
     </Compile>
     <Compile Include="PersianDateStuff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="OpenCalendarButtonImage.bmp" />
@@ -67,6 +83,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Resources\events.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
