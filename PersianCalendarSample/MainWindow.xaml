@@ -13,8 +13,8 @@
     <Grid>
         <PersianCalendarWPF:PersianCalendar
             Margin="10,10,420.6,127.4"
-            PersianCalendarWPF:InfoElement.Color="Brown"
             PersianCalendarWPF:InfoElement.DefaultTextColor="Black"
+            PersianCalendarWPF:InfoElement.HeaderColor="Brown"
             PersianCalendarWPF:InfoElement.MouseHoverBackgroundColor="Brown"
             PersianCalendarWPF:InfoElement.MouseHoverForegroundColor="Brown"
             PersianCalendarWPF:InfoElement.PressedBorderColor="Brown"
@@ -24,6 +24,8 @@
         <PersianCalendarWPF:PersianDatePicker
             Name="pcw"
             Margin="225,11,277.6,270.4"
+           
+           PersianCalendarWPF:InfoElement.HeaderColor="Green"
             FontFamily="IranSans"
             SelectedDateChanged="PersianDatePicker_SelectedDateChanged" />
     </Grid>

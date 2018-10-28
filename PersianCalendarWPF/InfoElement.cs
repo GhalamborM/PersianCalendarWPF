@@ -5,12 +5,12 @@ namespace PersianCalendarWPF
 {
     public class InfoElement : DependencyObject
     {
-        public static readonly DependencyProperty ColorProperty = DependencyProperty.RegisterAttached(
-            "Color", typeof(Brush), typeof(InfoElement), new PropertyMetadata(default(Brush)));
+        public static readonly DependencyProperty HeaderColorProperty = DependencyProperty.RegisterAttached(
+            "HeaderColor", typeof(Brush), typeof(InfoElement), new PropertyMetadata(default(Brush)));
 
-        public static void SetColor(DependencyObject element, Brush value) => element.SetValue(ColorProperty, value);
+        public static void SetHeaderColor(DependencyObject element, Brush value) => element.SetValue(HeaderColorProperty, value);
 
-        public static Brush GetColor(DependencyObject element) => (Brush)element.GetValue(ColorProperty);
+        public static Brush GetHeaderColor(DependencyObject element) => (Brush)element.GetValue(HeaderColorProperty);
 
         public static readonly DependencyProperty DefaultTextColorProperty = DependencyProperty.RegisterAttached(
            "DefaultTextColor", typeof(Brush), typeof(InfoElement), new PropertyMetadata(default(Brush)));

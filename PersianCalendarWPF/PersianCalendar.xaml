@@ -130,7 +130,7 @@
             Height="25"
             Margin="2"
             VerticalAlignment="Top"
-            Fill="{Binding Path=(controls:InfoElement.Color), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" />
+            Fill="{Binding Path=(controls:InfoElement.HeaderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" />
         <Button
             Name="titleButton"
             Height="25"
