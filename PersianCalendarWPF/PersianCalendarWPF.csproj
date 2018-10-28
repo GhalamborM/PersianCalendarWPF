@@ -68,6 +68,7 @@
     <Compile Include="HijriDate\PersianDay.cs" />
     <Compile Include="HijriDate\PersianMonth.cs" />
     <Compile Include="HijriDate\PersianYear.cs" />
+    <Compile Include="InfoElement.cs" />
     <Compile Include="PersianCalendar.xaml.cs">
       <DependentUpon>PersianCalendar.xaml</DependentUpon>
     </Compile>

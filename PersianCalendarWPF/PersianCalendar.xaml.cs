@@ -13,6 +13,7 @@ using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
 
 namespace PersianCalendarWPF
@@ -513,7 +514,10 @@ namespace PersianCalendarWPF
                         }
                         else
                         {
-                            button.Foreground = Brushes.Black;
+                            Binding b = new Binding("(controls:InfoElement.DefaultTextColor)");
+                            b.RelativeSource = new RelativeSource(RelativeSourceMode.FindAncestor,
+                                                                     typeof(UserControl), 1);
+                            button.SetBinding(Button.ForegroundProperty, b);
 
                         }
                         button.Content = date.Day.ToString();

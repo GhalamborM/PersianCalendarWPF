@@ -1,14 +1,30 @@
-﻿<Window x:Class="PersianCalendarSample.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:PersianCalendarWPF="clr-namespace:PersianCalendarWPF;assembly=PersianCalendarWPF"
-        xmlns:local="clr-namespace:PersianCalendarSample"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="335.854" Width="624.39">
+﻿<Window
+    x:Class="PersianCalendarSample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PersianCalendarWPF="clr-namespace:PersianCalendarWPF;assembly=PersianCalendarWPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PersianCalendarSample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="624.39"
+    Height="335.854"
+    mc:Ignorable="d">
     <Grid>
-        <PersianCalendarWPF:PersianCalendar FontFamily="IranSans" Margin="10,10,420.6,127.4"></PersianCalendarWPF:PersianCalendar>
-        <PersianCalendarWPF:PersianDatePicker Name="pcw" FontFamily="IranSans" Margin="225,11,277.6,270.4" SelectedDateChanged="PersianDatePicker_SelectedDateChanged"></PersianCalendarWPF:PersianDatePicker>
+        <PersianCalendarWPF:PersianCalendar
+            Margin="10,10,420.6,127.4"
+            PersianCalendarWPF:InfoElement.Color="Brown"
+            PersianCalendarWPF:InfoElement.DefaultTextColor="Black"
+            PersianCalendarWPF:InfoElement.MouseHoverBackgroundColor="Brown"
+            PersianCalendarWPF:InfoElement.MouseHoverForegroundColor="Brown"
+            PersianCalendarWPF:InfoElement.PressedBorderColor="Brown"
+            FontFamily="IranSans"
+            SelectedDateBackground="Green"
+            TodayBackground="Green" />
+        <PersianCalendarWPF:PersianDatePicker
+            Name="pcw"
+            Margin="225,11,277.6,270.4"
+            FontFamily="IranSans"
+            SelectedDateChanged="PersianDatePicker_SelectedDateChanged" />
     </Grid>
 </Window>
