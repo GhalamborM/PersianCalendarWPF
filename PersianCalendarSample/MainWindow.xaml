@@ -21,15 +21,16 @@
             PersianCalendarWPF:InfoElement.MouseHoverBackgroundColor="Brown"
             PersianCalendarWPF:InfoElement.MouseHoverForegroundColor="Brown"
             PersianCalendarWPF:InfoElement.PressedBorderColor="Yellow"
+            Background="Green"
             FontFamily="IranSans"
             SelectedDateBackground="Green"
             TodayBackground="Green" />
         <PersianCalendarWPF:PersianDatePicker
             Name="pcw"
+            PersianCalendarWPF:InfoElement.SelectedBackgroundColor="Yellow"
             PersianCalendarWPF:InfoElement.DateInRangeTextColor="Yellow"
             PersianCalendarWPF:InfoElement.WeekNameColor="Green"
             PersianCalendarWPF:InfoElement.DefaultTextColor="Black"
-            PersianCalendarWPF:InfoElement.SelectedBackgroundColor="Azure"
             PersianCalendarWPF:InfoElement.MouseHoverBackgroundColor="Brown"
             PersianCalendarWPF:InfoElement.MouseHoverForegroundColor="Brown"
             PersianCalendarWPF:InfoElement.PressedBorderColor="Yellow"

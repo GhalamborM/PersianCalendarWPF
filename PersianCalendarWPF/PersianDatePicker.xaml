@@ -139,7 +139,12 @@
                     local:InfoElement.MouseHoverForegroundColor="{Binding Path=(local:InfoElement.MouseHoverForegroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.PressedBorderColor="{Binding Path=(local:InfoElement.PressedBorderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.SelectedBackgroundColor="{Binding Path=(local:InfoElement.SelectedBackgroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
-                    local:InfoElement.WeekNameColor="{Binding Path=(local:InfoElement.WeekNameColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" />
+                    local:InfoElement.WeekNameColor="{Binding Path=(local:InfoElement.WeekNameColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    Background="{Binding Path=(local:InfoElement.SelectedBackgroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    BorderBrush="{Binding Path=(local:InfoElement.PressedBorderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    SelectedDateBackground="{Binding Path=(local:InfoElement.HeaderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    TodayBackground="{Binding Path=(local:InfoElement.HeaderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" />
+
             </Grid>
         </Popup>
     </Grid>
