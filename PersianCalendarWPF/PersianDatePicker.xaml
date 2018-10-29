@@ -132,12 +132,14 @@
                     x:Name="persianCalendar"
                     Width="175"
                     Height="160"
+                    local:InfoElement.DateInRangeTextColor="{Binding Path=(local:InfoElement.DateInRangeTextColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.DefaultTextColor="{Binding Path=(local:InfoElement.DefaultTextColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.HeaderColor="{Binding Path=(local:InfoElement.HeaderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.MouseHoverBackgroundColor="{Binding Path=(local:InfoElement.MouseHoverBackgroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.MouseHoverForegroundColor="{Binding Path=(local:InfoElement.MouseHoverForegroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     local:InfoElement.PressedBorderColor="{Binding Path=(local:InfoElement.PressedBorderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
-                    local:InfoElement.SelectedBackgroundColor="{Binding Path=(local:InfoElement.SelectedBackgroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" />
+                    local:InfoElement.SelectedBackgroundColor="{Binding Path=(local:InfoElement.SelectedBackgroundColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    local:InfoElement.WeekNameColor="{Binding Path=(local:InfoElement.WeekNameColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" />
             </Grid>
         </Popup>
     </Grid>

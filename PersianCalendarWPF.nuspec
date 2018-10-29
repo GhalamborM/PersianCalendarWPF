@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PersianCalendarWPF</id>
+       <version>1.0.25</version>
+    <title>PersianCalendarWPF</title>
+    <authors>Mahdi Hosseini</authors>
+    <owners>Mahdi Hosseini</owners>
+    <projectUrl>https://github.com/ghost1372/PersianCalendarWPF</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple and Powerful WPF Persian DateTimePicker and Calendar</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>WPF c# Calendar Persian PersianCalendar DateTime DateTimePicker</tags>
+  </metadata>
+    <files>
+  <file src="lib\Newtonsoft.Json.dll" target="lib\Newtonsoft.Json.dll"/>
+  </files>
+</package>

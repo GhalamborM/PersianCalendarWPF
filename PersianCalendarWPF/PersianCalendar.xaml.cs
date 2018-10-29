@@ -529,7 +529,10 @@ namespace PersianCalendarWPF
                         button.Content = date.Day.ToString();
                         button.IsEnabled = true;
                         button.Tag = date;
-                        button.Foreground = Brushes.LightGray;
+                        Binding b = new Binding("(controls:InfoElement.DateInRangeTextColor)");
+                        b.RelativeSource = new RelativeSource(RelativeSourceMode.FindAncestor,
+                                                                 typeof(UserControl), 1);
+                        button.SetBinding(Button.ForegroundProperty, b);
                     }
                     else
                     {//not in [DiplayDateStart, DiplayDateEnd] range

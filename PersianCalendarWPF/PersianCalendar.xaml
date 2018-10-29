@@ -69,7 +69,7 @@
             <Setter Property="ContentTemplate">
                 <Setter.Value>
                     <DataTemplate>
-                        <TextBlock Style="{x:Null}" Text="{Binding}" />
+                        <TextBlock Style="{x:Null}" Foreground="{Binding Path=(controls:InfoElement.WeekNameColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" Text="{Binding}" />
                     </DataTemplate>
                 </Setter.Value>
             </Setter>

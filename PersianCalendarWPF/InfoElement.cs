@@ -46,5 +46,19 @@ namespace PersianCalendarWPF
         public static void SetSelectedBackgroundColor(DependencyObject element, Brush value) => element.SetValue(SelectedBackgroundProperty, value);
 
         public static Brush GetSelectedBackgroundColor(DependencyObject element) => (Brush)element.GetValue(SelectedBackgroundProperty);
+
+        public static readonly DependencyProperty WeekNameColorProperty = DependencyProperty.RegisterAttached(
+           "WeekNameColor", typeof(Brush), typeof(InfoElement), new PropertyMetadata(default(Brush)));
+
+        public static void SetWeekNameColor(DependencyObject element, Brush value) => element.SetValue(WeekNameColorProperty, value);
+
+        public static Brush GetWeekNameColor(DependencyObject element) => (Brush)element.GetValue(WeekNameColorProperty);
+
+        public static readonly DependencyProperty DateInRangeTextColorProperty = DependencyProperty.RegisterAttached(
+           "DateInRangeTextColor", typeof(Brush), typeof(InfoElement), new PropertyMetadata(default(Brush)));
+
+        public static void SetDateInRangeTextColor(DependencyObject element, Brush value) => element.SetValue(DateInRangeTextColorProperty, value);
+
+        public static Brush GetDateInRangeTextColor(DependencyObject element) => (Brush)element.GetValue(DateInRangeTextColorProperty);
     }
 }
