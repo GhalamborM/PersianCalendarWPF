@@ -105,6 +105,7 @@
             KeyUp="dateTextBox_KeyUp"
             LostFocus="dateTextBox_LostFocus"
             MaxLines="1"
+            MaxLength="10"
             Template="{StaticResource TextBoxTemplate}" />
         <Button
             Name="openCalendarButton"
