@@ -127,7 +127,7 @@
             Opened="persianCalnedarPopup_Opened"
             PlacementTarget="{Binding ElementName=openCalendarButton}"
             StaysOpen="False">
-            <Grid Name="persianCalendarGrid" Background="White">
+            <Grid Name="persianCalendarGrid" Background="{Binding Path=(local:InfoElement.PressedBorderColor), RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                 <local:PersianCalendar
                     x:Name="persianCalendar"
                     Width="175"
